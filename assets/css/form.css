@@ -1,0 +1,156 @@
+.form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background: #fff;
+  display: none;
+}
+.form .cont .contRow .close {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  cursor: pointer;
+}
+.form .cont .contRow img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.form .cont .contRow .frame,
+.form .cont .contRow .working {
+  display: none;
+}
+.form .cont .contRow .title,
+.form .cont .contRow .thank {
+  color: #00325f;
+  font-family: Bricolage Grotesque;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  margin: 0 30px 80px 0;
+}
+.form .cont .contRow .thank {
+  display: none;
+}
+.form .cont .contRow form {
+  max-width: 400px;
+  padding-left: 30px;
+}
+.form .cont .contRow form input,
+.form .cont .contRow form .nice-select,
+.form .cont .contRow form .list {
+  width: 100%;
+}
+.form .cont .contRow form .nice-select {
+  border: 2px solid #000;
+  height: 50px;
+  padding-top: 5px;
+  margin-bottom: 55px;
+}
+.form .cont .contRow form input {
+  margin-bottom: 50px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.form .cont .contRow form label,
+.form .cont .contRow form p {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 5px 17px;
+}
+.form .cont .contRow form .sendForm {
+  font-family: DM Sans;
+  background: #368c0e;
+  border-radius: 40px;
+  padding: 15px 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  color: #fff;
+  width: 200px;
+  margin: 100px auto;
+  text-align: center;
+}
+.form .cont .contRow .fallingChar {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-300px);
+  animation: fall 0.7s ease-in-out forwards;
+  margin-right: 6px; /* Adjust the margin as needed for proper spacing */
+}
+@keyframes fall {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form.active .cont .contRow .title {
+  display: none;
+}
+.form.active .cont .contRow .thank {
+  display: block;
+}
+.form.active .cont .contRow form {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .form .cont .contRow .title {
+    font-size: 30px;
+  }
+  .form .cont .contRow img {
+    display: none;
+  }
+  .form .cont .contRow .frame {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .scrollUp a svg {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 500px) {
+  .form {
+    background: #ffeaf0 !important;
+  }
+  .form .cont .contRow form {
+    padding-left: 0;
+  }
+  .form .cont .contRow form input,
+  .form .cont .contRow form .nice-select,
+  .form .cont .contRow form .list {
+    background: #ffeaf0;
+  }
+  .form .cont .contRow form button {
+    width: 150px;
+    font-size: 15px;
+  }
+  .form .cont .contRow form button svg {
+    width: 22px;
+    height: 22px;
+  }
+  .form.active .cont .contRow .frame,
+  .form.active .cont .contRow .working {
+    display: block;
+  }
+  .form.active .cont .contRow .working {
+    margin-right: 30%;
+  }
+  .scrollUp {
+    display: none !important;
+  }
+}
